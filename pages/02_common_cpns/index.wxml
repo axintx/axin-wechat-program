@@ -1,0 +1,66 @@
+<!--pages/02_common_cpns/index.wxml-->
+<!-- scroll-view 组件监听事件 -->
+<view>------------------scroll-view 组件 监听事件------------</view>
+<!-- 上下滚动 -->
+<scroll-view 
+  class="containers scroll-x" 
+  scroll-x 
+  enable-flex
+  bindscrolltoupper="onScrollToUpper"
+  bindscrolltolower="onScrollToLower"
+  bindscroll="onScroll"
+>
+  <block wx:for="{{viewColors}}" wx:key="*this">
+    <view class="item" style="background: {{item}};">{{item}}</view>
+  </block>
+</scroll-view>
+
+
+<!-- scroll-view 组件 -->
+<view>------------------scroll-view 组件 上下滚动------------</view>
+<!-- 上下滚动 -->
+<!-- <scroll-view class="containers scroll-y" scroll-y >
+  <block wx:for="{{viewColors}}" wx:key="*this">
+    <view class="item" style="background: {{item}};">{{item}}</view>
+  </block>
+</scroll-view> -->
+
+<!-- scroll-view 组件 -->
+<view>------------------scroll-view 组件 左右滚动------------</view>
+<!-- 上下滚动 -->
+<!-- <scroll-view class="containers scroll-x" scroll-x enable-flex>
+  <block wx:for="{{viewColors}}" wx:key="*this">
+    <view class="item" style="background: {{item}};">{{item}}</view>
+  </block>
+</scroll-view> -->
+
+<!-- 1. text 组件 -->
+<view>---------------------text 组件---------------------</view>
+<text user-select>{{message}}</text>
+<text user-select="{{true}}">{{message}}</text>
+<text decode>&gt;</text> 
+
+<!--  -->
+<view>-------------------button 组件-------------------</view>
+<button>按钮</button>
+<button size="mini" type="default">type</button>
+<button size="mini" type="warn">type</button>
+<button size="mini" class="btn">自定义属性</button>
+<button size="mini" plain> plain 属性</button>
+<button size="mini" disabled>disabled 属性</button>
+<button size="mini" loading>loading 属性</button>
+<button size="mini" hover-class="active">hover效果</button>
+<button size="mini" bindtap="getUserInfo">获取用户信息</button>
+<button size="mini" bindgetphonenumber="getPhoneNumber" open-type="getPhoneNumber">手机号码</button>
+
+<!-- image -->
+<view>-------------------image 组件-------------------</view>
+<image src="/assets/logo.jpg" mode="aspectFit"/>
+<!-- image 基本都是设置 widthFix -->
+<image src="/assets/logo.jpg" mode="widthFix"/>
+<image src="/assets/logo.jpg" mode="heightFix"/>
+
+<!-- 选择本地图片: 将本地图片使用 image 展示出来 -->
+<button bindtap="onChooseImage">选择图片</button>
+<image src="{{chooseImageUrl}}" mode="widthFix"></image>
+

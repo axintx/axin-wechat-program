@@ -1,0 +1,43 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/favor/favor",
+    "pages/order/order",
+    "pages/profile/profile",
+    "pages/01_register_page/index",
+    "pages/02_common_cpns/index",
+    "pages/03_learn_wxss/index",
+    "pages/04_learn_wxml/index",
+    "pages/05_learn_wxs/index",
+    "pages/06_learn_event/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "阿心旅途",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "text": "首页",
+        "pagePath": "pages/index/index"
+      },
+      {
+        "text": "收藏",
+        "pagePath": "pages/favor/favor"
+      },
+      {
+        "text": "订单",
+        "pagePath": "pages/order/order"
+      },
+      {
+        "text": "我的",
+        "pagePath": "pages/profile/profile"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents"
+}

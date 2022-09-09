@@ -1,0 +1,34 @@
+/* pages/02_common_cpns/index.wxss */
+.btn {
+  color: white;
+  background: orange;
+}
+
+.active {
+  background-color: red;
+}
+
+button {
+  margin-left: 5px;
+}
+
+image {
+  width: 100%;
+}
+
+/* scroll-view */
+.containers {
+  background-color: orange;
+  height: 150px;
+}
+
+.scroll-x {
+  display: flex;
+}
+
+.item {
+  width: 100px;
+  height: 100px;
+  color: white;
+  flex-shrink: 0;
+}

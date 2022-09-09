@@ -1,0 +1,22 @@
+<!--pages/01_初体验/index.wxml-->
+<view class="banner">
+   <swiper circular autoplay indicator-dots="true">
+      <block wx:for="{{banners}}" wx:key="acm">
+        <swiper-item>
+          <image mode="widthFix" src="{{item.image}}"></image>
+        </swiper-item>
+      </block>
+   </swiper>
+</view>
+
+<view class="buttons">
+  <block wx:for="{{btns}}" wx:key="*this">
+    <button style="background: {{item}};" bindtap="onBtnClick" data-color="{{item}}">{{item}}</button>
+  </block>
+</view>
+
+<view class="list">
+  <block wx:for="{{30}}" wx:key="*this">
+    <view>{{item}}</view>
+  </block>
+</view>

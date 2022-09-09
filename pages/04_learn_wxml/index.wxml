@@ -1,0 +1,34 @@
+<!--pages/04_learn_wxml/index.wxml-->
+<text>pages/04_learn_wxml/index.wxml</text>
+<view>{{ mesaage }}</view>
+<view>{{ firstName }}</view>
+<view>{{ lastName }}</view>
+<view>{{ date }}</view>
+
+<!-- 2. 条件判断 wx:if wx:elif wx:else -->
+
+<!-- 3. hidden 属性 默认值是 true display:none 来隐藏元素 类似于view 中的v-show-->
+<view hidden> 我是hidden 的 view</view>
+
+<view hidden="{{isHidden}}">hidden  第二元素</view>
+<button bindtap="changeHidden">change</button>
+<!-- wx:if 直接删除dom -->
+<view wx:if="{{!isHidden}}"></view>
+
+
+<!-- 4. 列表展示 wx:for -->
+<!-- 遍历 data 中的数组 -->
+
+<!-- 遍历数字  *this 表示 item 本身-->
+<view class="number">
+  <view wx:for="{{8}}" wx:key="*this">
+    {{item}}
+  </view>
+</view>
+
+<!-- 遍历字符串 -->
+<view class="string">
+  <view wx:for="axintongxue" wx:key="*this">
+    {{item}}
+  </view>
+</view>

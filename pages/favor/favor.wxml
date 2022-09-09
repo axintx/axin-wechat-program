@@ -1,0 +1,23 @@
+<!--pages/favor/favor.wxml-->
+<!-- 1. 显示普通的文本 -->
+<text class="title">pages/favor/favor.wxml</text>
+
+<!-- 2. 保存在js代码中 -->
+<view class="message">{{ message }}</view>
+
+<!-- 3. 动态展示列表数据 -->
+<view class="movies">
+  <!-- for 循环: block -->
+  <block wx:for="{{movies}}" wx:key="item">
+    <view >
+     {{ index }} - {{ item }} 
+    </view>
+  </block>
+
+<!-- 4. 事件绑定: 计数器 -->
+<view class="counter">
+  <view class="conut">当前计数: {{ counter }}</view>
+  <button size="mini" type="primary" bindtap="increment">+1</button>
+  <button size="mini" type="warn" bindtap="decrement">-1</button>
+</view>
+</view>
